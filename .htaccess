@@ -1,0 +1,17 @@
+RewriteEngine On 
+RewriteCond %{SERVER_PORT} 80
+RewriteCond %{HTTP_HOST} ^(www\.)?marcbrown\.in
+RewriteRule ^(.*)$ http://localhost/marcbrown-new/$1 [R,L]
+RewriteRule ^contact/?$ contact.php 
+RewriteRule ^Terms-and-conditions/?$ termsAndConditions.php
+RewriteRule ^Privacy-policy/?$ privacy.php
+RewriteRule ^Shipping-and-refund-policy/?$ shippingandrefund.php
+RewriteRule ^My-account/?$ my-account.php
+RewriteRule ^login/?$ login.php
+RewriteRule ^signup/?$ register.php
+RewriteRule category/(.*)/(.*) shop-fullwide.php?catname=$1&cat=$2
+RewriteRule category/(.*)/(.*) shop-fullwide.php?catname=$1&cat=$2
+RewriteRule occasion/(.*)/(.*) shop-fullwide2.php?catname=$1&occ=$2
+RewriteRule occasion/(.*)/(.*) shop-fullwide2.php?catname=$1&occ=$2
+RewriteRule ^search-results/?$ searchresults.php
+RewriteRule product/(.*)/([0-9]+) product-details.php?cakename=$1&cid=$2
